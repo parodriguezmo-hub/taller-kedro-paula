@@ -1,0 +1,46 @@
+# .gitignore sugerido para un proyecto Kedro (sección 3.4 de la guía)
+# Cópialo tal cual a un archivo llamado ".gitignore" en la raíz de tu proyecto.
+
+# Entorno virtual
+.venv/
+venv/
+
+# Datos: nunca se versionan, cada capa se regenera corriendo el pipeline
+data/01_raw/
+data/02_intermediate/
+data/03_primary/
+data/04_feature/
+data/05_model_input/
+data/06_models/
+data/07_model_output/
+data/08_reporting/
+!data/**/.gitkeep
+
+# Credenciales y configuración local: nunca se versionan
+conf/local/**
+!conf/local/.gitkeep
+
+# Logs
+logs/
+info.log
+
+# Notebooks: checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Kedro-Viz
+.telemetry
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# VSCode
+.vscode/
+.DS_Store
+__pycache__/
+.coverage
+.viz/
+.ipython/

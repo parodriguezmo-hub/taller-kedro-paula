@@ -1,0 +1,28 @@
+companies:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/companies.csv
+
+reviews:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/reviews.csv
+
+shuttles:
+  type: pandas.ExcelDataset
+  filepath: data/01_raw/shuttles.xlsx
+  load_args:
+    engine: openpyxl
+
+destinos:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/destinos.csv
+
+destinos_texto:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/destinos.csv
+  load_args:
+    dtype:
+      codigo: str
+
+model_input_table:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_table.parquet
